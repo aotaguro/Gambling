@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Crypto Mining Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ZaneCoin</h1>
+        <div id="balance" class="large-balance">0 ZN</div>
+        <div id="rate">Mining Rate: 0.1 ZNC/sec</div>
+        <button class="button" onclick="upgradeMining()">Upgrade Mining (Cost: 10 ZNC)</button>
 
+        <!-- Coin Flip Gambling Section -->
+        <div class="gambling-section">
+            <h2>Coin Flip</h2>
+            <input type="number" id="gambleAmount" placeholder="Enter ZNC value">
+            <button class="button" onclick="gamble()">Flip Coin</button>
+            <div id="gamble-result"></div>
+        </div>
+
+        <!-- Plinko Game Section -->
+        <h2>Plinko Game</h2>
+        <div class="plinko-section">
+            <input type="number" id="ballValue" placeholder="Enter ZNC value" min="0.1" step="0.1">
+            <button class="button" onclick="dropBall()">Drop Ball</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="plinko-board" width="600" height="400"></canvas>
+        </div>
+        <div id="plinko-result"></div>
+
+        <div id="result"></div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
